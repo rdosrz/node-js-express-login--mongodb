@@ -128,7 +128,7 @@ exports.registros = (req, res) => {
           return res.status(404).send({ message: "User Not found." });
           
       } else {
-         console.log('regreso tickets');
+        
          return res.send(JSON.stringify(result));
           
       }

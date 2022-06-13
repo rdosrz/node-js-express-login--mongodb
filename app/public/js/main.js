@@ -35,7 +35,7 @@ $('#kt_login_signin_submit').click(function(e) {
             data: JSON.stringify(signData),
         })
         .done(function(response){
-            $(location).prop('href', 'http://localhost:8080/')
+            $(location).prop('href', '/')
         })
         .fail(function(xhr, textStatus, errorThrown){
               
@@ -45,7 +45,7 @@ $('#kt_login_signin_submit').click(function(e) {
               }, 1000);
               $('#errort').show();
             
-            console.log("ERROR: ",xhr.responseText)
+      
               return xhr.responseText;
 
                

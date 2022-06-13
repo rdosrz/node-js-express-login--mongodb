@@ -48,7 +48,7 @@ $(document).ready(function() {
                
              }).fail(function(xhr, textStatus, errorThrown){
                         
-                console.log("ERROR: ",xhr.responseText)
+               
        return xhr.responseText;
 
   });
@@ -69,13 +69,13 @@ $(document).ready(function() {
         
     })
     .done(function(response){
-        $(location).prop('href', 'http://localhost:8080/')
+        $(location).prop('href', '/')
     })
     .fail(function(xhr, textStatus, errorThrown){
           
        
         
-        console.log("ERROR: ",xhr.responseText)
+        
           return xhr.responseText;
 
            
@@ -111,7 +111,7 @@ $('#kt_newTicket').click(function(e) {
         data: JSON.stringify(newData),
     })
     .done(function(response){
-        $(location).prop('href', 'http://localhost:8080/')
+        $(location).prop('href', '/')
     })
     .fail(function(xhr, textStatus, errorThrown){
           
@@ -120,7 +120,7 @@ $('#kt_newTicket').click(function(e) {
             alert("Ocurrio un error  en el guardado. Intenta Más tarde");
           }, 1000);
                       
-        console.log("ERROR: ",xhr.responseText)
+        
           return xhr.responseText;
 
            
@@ -145,12 +145,12 @@ function showDiv(pageid)
         data: JSON.stringify(newData),
     })
     .done(function(response){
-        $(location).prop('href', 'http://localhost:8080/')
+        $(location).prop('href', '/')
     })
     .fail(function(xhr, textStatus, errorThrown){
 
                      
-        console.log("ERROR: ",xhr.responseText)
+        
           return xhr.responseText;
 
            
@@ -168,7 +168,7 @@ function updateTicket(idticket)
         date:$("#fecha"+idticket).val(), 
         priority:$("#prioridad"+idticket).val()                                         
     }
-    console.log(newData);
+   
     
     $.ajax({
         url: "/api/auth/updateticket",
@@ -178,12 +178,12 @@ function updateTicket(idticket)
         data: JSON.stringify(newData),
     })
     .done(function(response){
-        $(location).prop('href', 'http://localhost:8080/')
+        $(location).prop('href', '/')
     })
     .fail(function(xhr, textStatus, errorThrown){
 
                      
-        console.log("ERROR: ",xhr.responseText)
+    
           return xhr.responseText;
 
            
