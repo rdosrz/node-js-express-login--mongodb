@@ -8,7 +8,7 @@ verifyToken = (req, res, next) => {
   let token = req.session.token;
 
   if (!token) {
-          res.redirect('http://localhost:8080/login');
+          res.redirect('/login');
           // orig return res.status(403).send({ message: "No token provided!" });
   }
 

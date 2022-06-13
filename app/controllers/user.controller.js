@@ -3,8 +3,8 @@ exports.allAccess = (req, res) => {
 };
 
 exports.userBoard = (req, res) => {
-console.log(res);
-  res.redirect('http://localhost:8080/dashboard');
+
+  res.redirect('/dashboard');
   //res.status(200).send("User Content.");
 };
 
