@@ -1,7 +1,7 @@
 $(document).ready(function() {
               
         $.ajax({
-            url: "/api/auth/tickets",
+            url: "https://app-talent-rdosrz.herokuapp.com/api/auth/tickets",
             type:"GET",
             dataType:"json",
             contentType: "application/json",
@@ -62,14 +62,14 @@ $(document).ready(function() {
 
  
     $.ajax({
-        url: "/api/auth/signout",
+        url: "https://app-talent-rdosrz.herokuapp.com/api/auth/signout",
         type:"POST",
         dataType:"json",
         contentType: "application/json",
         
     })
     .done(function(response){
-        $(location).prop('href', '/')
+        $(location).prop('href', 'https://app-talent-rdosrz.herokuapp.com/')
     })
     .fail(function(xhr, textStatus, errorThrown){
           
@@ -104,14 +104,14 @@ $('#kt_newTicket').click(function(e) {
 
     
     $.ajax({
-        url: "/api/auth/newticket",
+        url: "https://app-talent-rdosrz.herokuapp.com/api/auth/newticket",
         type:"POST",
         dataType:"json",
         contentType: "application/json",
         data: JSON.stringify(newData),
     })
     .done(function(response){
-        $(location).prop('href', '/')
+        $(location).prop('href', 'https://app-talent-rdosrz.herokuapp.com/')
     })
     .fail(function(xhr, textStatus, errorThrown){
           
@@ -138,14 +138,14 @@ function showDiv(pageid)
     }
 
     $.ajax({
-        url: "/api/auth/deleteticket",
+        url: "https://app-talent-rdosrz.herokuapp.com/api/auth/deleteticket",
         type:"POST",
         dataType:"json",
         contentType: "application/json",
         data: JSON.stringify(newData),
     })
     .done(function(response){
-        $(location).prop('href', '/')
+        $(location).prop('href', 'https://app-talent-rdosrz.herokuapp.com/')
     })
     .fail(function(xhr, textStatus, errorThrown){
 

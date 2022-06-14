@@ -28,14 +28,14 @@ $('#kt_login_signin_submit').click(function(e) {
         }
 
         $.ajax({
-            url: "/api/auth/signin",
+            url: "https://app-talent-rdosrz.herokuapp.com/api/auth/signin",
             type:"POST",
             dataType:"json",
             contentType: "application/json",
             data: JSON.stringify(signData),
         })
         .done(function(response){
-            $(location).prop('href', '/')
+            $(location).prop('href', 'https://app-talent-rdosrz.herokuapp.com/')
         })
         .fail(function(xhr, textStatus, errorThrown){
               

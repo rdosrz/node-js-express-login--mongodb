@@ -26,5 +26,4 @@ module.exports = function(app) {
   app.post("/api/auth/deleteticket", controller.deleteticket);
   app.post("/api/auth/updateticket", controller.updateticket);
 
-
 };
